@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import Navbar from "./components/UI/Navbar";
+import MovieContainer from "./components/MovieContainer";
+import Modal from "./components/UI/Modal";
+import "./App.css";
 
 function App() {
+  const [modalData, setModalData] = useState();
+  const [showDetail, setShowDetail] = useState(false);
+
+  const showDetailHandler = (data) => {
+    setModalData(data);
+    setShowDetail(true);
+  };
+
+  const hideShowDetailHandler = () => {
+    setShowDetail(false);
+  };
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showDetail && <Modal data={modalData} onClose={hideShowDetailHandler}/>}
+      <Navbar />
+      <MovieContainer onShowMore={showDetailHandler}/>
     </div>
   );
 }
