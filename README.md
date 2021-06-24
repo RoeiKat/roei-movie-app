@@ -2,69 +2,50 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Roei Katabi
 
-In the project directory, you can run:
+# Basic Info -
+The app main libraries:
+`react-infinite-scroll-component` - manage the infinite scroll.
+`fontawesome` - applications icons.
 
-### `npm start`
+# Components - 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## MovieCard -
+Displays the poster for the movie.
+When hovered on it makes a cool looking effect,
+and show's that it's clickable.
+When clicked, opens up the Modal component.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Movies Container -
+Using the Infinity scroll component to fetch data for the next page
+as the user scrolls down,
+passes down the movie data and renders a MovieCard component for it.
 
-### `npm test`
+#### Navbar - 
+A simple navbar with no functionality, only to show the name of the app creator.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Modal - 
+When a MovieCard component is clicked, a Modal component pops up so you can see:
+1) The Movie title.
+2) The Movie Poster.
+3) The Movie Overview.
+4) A link for a Youtube trailer.
+5) A link for the IMDB website with additional info about the movie.
 
-### `npm run build`
+# Future Improvement - 
+Investing some time in testing, I'm kinda new to all this world so I need some time to learn how to make tests in React and how it works.
+Adding additional features to the app like:
+1) Search option.
+2) Adding to favorites.
+3) Favorites section.
+4) Categories.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Known Bugs - 
+Sometimes the styling can go a little bit crazy on smaller screens.
+plus the rendering on the 'react-infinite-scroll-component' might have some issues since its a third party library.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Most Difficult - 
+1) Styling - 
+The styling of the app was the most difficult part for me.
+It took me quite a while to figure things out and had to learn to use CSS grid and Media querys to make the app accessible on all screen sizes.

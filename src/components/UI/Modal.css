@@ -23,17 +23,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    color: #E7F0FF;
+    color: #FDE74C;
   }
 
   .content_footer {
     margin: auto;
     display: flex;
     flex-direction: column;
-    color: #E3EBFF;
+    color: #FCFCFC;
+    border-bottom: 2px solid #FF4000;
   }
 
-
+  .desc {
+    color: #FF4000;
+    border-bottom: 2px solid #FF4000;
+  }
   
   .modal {
     position: fixed;
@@ -73,10 +77,11 @@
   .links {
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
   }
   a {
     font-size: 30px;
+    margin: 7px;
   }
 
   .youtube {
@@ -92,4 +97,12 @@
   }
   .close_btn:hover {
     cursor: pointer;
+  }
+  @media screen and (max-width: 600px) {
+    .links {
+        flex-direction: column;
+    }
+    .content_footer {
+      font-size: 12px;
+    }
   }
